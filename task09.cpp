@@ -1,26 +1,24 @@
 #include<iostream>
 using namespace std;
-void tpChecker(int,float);
-main(){
-
+void tpChecker(int People,float tissuePaper);
+main()
+{
 	int people;
-	float tp;
+	float TissuePaper;
 	cout<<"Number of people in the household: ";
 	cin>>people;
 	cout<<"Number of rolls of TP: ";
-	cin>>tp;
-	tpChecker(people,tp);
-
+	cin>>TissuePaper;
+	tpChecker(people,TissuePaper);
 }
 
-void tpChecker(int people, float tp){
-
+void tpChecker(int People, float tissuePaper)
+{
 	int days;
-	float sheetsPerDay,tpPerDay;
-	// tpPerPerson = 500/57.0;
-	sheetsPerDay = 57 * people;
-	tpPerDay = 500 / sheetsPerDay;
-	days = tp * tpPerDay;
+	float papersPerDay,tissuePerDay;
+	papersPerDay = 57 * People;
+	tissuePerDay = 500 / papersPerDay;
+	days =  tissuePaper * tissuePerDay;
 	if (days >= 14){
 		cout<<"Your TP will last "<<days<<" days, no need to panic!";
 	}
